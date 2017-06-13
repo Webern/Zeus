@@ -1,0 +1,1 @@
+A library for core C++ classes, macros and functionality that I keep writing over and over.
