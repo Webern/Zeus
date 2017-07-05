@@ -34,7 +34,7 @@
 
 #include "crossguid/Guid.hpp"
 
-namespace lyre
+namespace zeus
 {
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -42,20 +42,65 @@ namespace lyre
 ////////////////////////////////////////////////////////////////////////////////
 
 	Guid::Guid()
-	: myInt{ 0 }
+    : mValue{}
 	{
         xg::Guid g = xg::newGuid();
+        mValue = g.str();
 	}
+
+
+    Guid::Guid( const std::array<unsigned char, 16>& inBytes )
+    : mValue{}
+    {
+        xg::Guid g{ inBytes };
+        mValue = g.str();
+    }
+
+
+    Guid::Guid( const unsigned char* inBytes )
+    : mValue{}
+    {
+        xg::Guid g{ inBytes };
+        mValue = g.str();
+    }
+
+
+    Guid::Guid( const std::string& inString )
+    : mValue{}
+    {
+        xg::Guid g{ inString };
+
+        if( g.isValid() )
+        {
+            mValue = g.str();
+        }
+    }
 
 ////////////////////////////////////////////////////////////////////////////////
 // PUBLIC FUNCTIONS ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-	void
-	Guid::pubicFunc() const
+	bool
+	Guid::getIsValid() const
 	{
-
+        xg::Guid g{ mValue };
+        return g.isValid();
 	}
+
+
+    void
+    Guid::setZero()
+    {
+        xg::Guid g{};
+        mValue = g.str();
+    }
+
+
+    std::string
+    Guid::getString() const
+    {
+        return mValue;
+    }
 
 ////////////////////////////////////////////////////////////////////////////////
 // PRIVATE FUNCTIONS ///////////////////////////////////////////////////////////
@@ -67,4 +112,45 @@ namespace lyre
 
     }
 
+////////////////////////////////////////////////////////////////////////////////
+// NON-MEMBER FUNCTIONS ////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+    bool operator<( const Guid& inLeft, const Guid& inRight )
+    {
+        return inLeft.getString() < inRight.getString();
+    }
+
+
+    bool operator>( const Guid& inLeft, const Guid& inRight )
+    {
+        return inRight.getString() < inLeft.getString();
+    }
+
+
+    bool operator==( const Guid& inLeft, const Guid& inRight )
+    {
+        const bool isLessThan = inLeft < inRight;
+        const bool isGreaterThan = inLeft > inRight;
+        const bool isEqual = !isLessThan && !isGreaterThan;
+        return isEqual;
+    }
+
+
+    bool operator!=( const Guid& inLeft, const Guid& inRight )
+    {
+        return !( inLeft == inRight );
+    }
+
+
+    bool operator<=( const Guid& inLeft, const Guid& inRight )
+    {
+        return ( inLeft < inRight ) || ( inLeft == inRight );
+    }
+
+
+    bool operator>=( const Guid& inLeft, const Guid& inRight )
+    {
+        return ( inLeft > inRight ) || ( inLeft == inRight );
+    }
 }

@@ -2,26 +2,40 @@
 
 #pragma once
 
-#include <cstdint>
+#include <string>
+#include <array>
 
-namespace lyre
+namespace zeus
 {
-	/// @brief TODO
+	/// @brief Guid Generator
 	///
-	/// @detailed TODO
+	/// @detailed Generates a guid and holds it as a string
 	///
     class Guid
     {
     public:
     	Guid();
+        Guid( const std::array<unsigned char, 16>& inBytes );
+        Guid( const unsigned char* inBytes );
+        Guid( const std::string& inString );
 
     public:
-    	void pubicFunc() const;
+    	bool getIsValid() const;
+        void setZero();
+        std::string getString() const;
 
     private:
-    	int myInt;
+        std::string mValue;
 
     private:
         void privateFunc();     
     };
+
+    bool operator<( const Guid& inLeft, const Guid& inRight );
+    bool operator>( const Guid& inLeft, const Guid& inRight );
+    bool operator==( const Guid& inLeft, const Guid& inRight );
+    bool operator!=( const Guid& inLeft, const Guid& inRight );
+    bool operator>=( const Guid& inLeft, const Guid& inRight );
+    bool operator<=( const Guid& inLeft, const Guid& inRight );
+
 }
