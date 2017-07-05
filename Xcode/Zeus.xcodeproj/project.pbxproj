@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29A8C01B1EF042B400AD2478 /* EnumWithString.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A8C0191EF042B400AD2478 /* EnumWithString.h */; };
+		29A8C01C1EF042B400AD2478 /* Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A8C01A1EF042B400AD2478 /* Enum.h */; };
+		29EDDEFC1F0CB2FA000AF750 /* Guid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29EDDEFA1F0CB2FA000AF750 /* Guid.cpp */; };
+		29EDDEFD1F0CB2FA000AF750 /* Guid.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 29EDDEFB1F0CB2FA000AF750 /* Guid.hpp */; };
+		29EDDF001F0CB3F6000AF750 /* Guid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29EDDEFE1F0CB3F6000AF750 /* Guid.cpp */; };
+		29EDDF011F0CB3F6000AF750 /* Guid.h in Headers */ = {isa = PBXBuildFile; fileRef = 29EDDEFF1F0CB3F6000AF750 /* Guid.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29A8C0101EF0418C00AD2478 /* libZeus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZeus.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A8C0191EF042B400AD2478 /* EnumWithString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumWithString.h; sourceTree = "<group>"; };
+		29A8C01A1EF042B400AD2478 /* Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
+		29EDDEFA1F0CB2FA000AF750 /* Guid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Guid.cpp; sourceTree = "<group>"; };
+		29EDDEFB1F0CB2FA000AF750 /* Guid.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Guid.hpp; sourceTree = "<group>"; };
+		29EDDEFE1F0CB3F6000AF750 /* Guid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Guid.cpp; sourceTree = "<group>"; };
+		29EDDEFF1F0CB3F6000AF750 /* Guid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guid.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29A8C00D1EF0418C00AD2478 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29A8C0071EF0418C00AD2478 = {
+			isa = PBXGroup;
+			children = (
+				29EDDEF81F0CB2C4000AF750 /* Frameworks */,
+				29A8C0181EF0420600AD2478 /* private */,
+				29A8C0171EF041F500AD2478 /* include */,
+				29A8C0111EF0418C00AD2478 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29A8C0111EF0418C00AD2478 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29A8C0101EF0418C00AD2478 /* libZeus.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29A8C0171EF041F500AD2478 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				29A8C0191EF042B400AD2478 /* EnumWithString.h */,
+				29A8C01A1EF042B400AD2478 /* Enum.h */,
+				29EDDEFE1F0CB3F6000AF750 /* Guid.cpp */,
+				29EDDEFF1F0CB3F6000AF750 /* Guid.h */,
+			);
+			name = include;
+			path = ../Sourcecode/include/zeus;
+			sourceTree = "<group>";
+		};
+		29A8C0181EF0420600AD2478 /* private */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = private;
+			path = ../Sourcecode/private/zeus;
+			sourceTree = "<group>";
+		};
+		29EDDEF81F0CB2C4000AF750 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29EDDEF91F0CB2E3000AF750 /* crossguid */,
+			);
+			name = Frameworks;
+			path = ../Frameworks;
+			sourceTree = "<group>";
+		};
+		29EDDEF91F0CB2E3000AF750 /* crossguid */ = {
+			isa = PBXGroup;
+			children = (
+				29EDDEFA1F0CB2FA000AF750 /* Guid.cpp */,
+				29EDDEFB1F0CB2FA000AF750 /* Guid.hpp */,
+			);
+			path = crossguid;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29A8C00E1EF0418C00AD2478 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A8C01B1EF042B400AD2478 /* EnumWithString.h in Headers */,
+				29EDDF011F0CB3F6000AF750 /* Guid.h in Headers */,
+				29EDDEFD1F0CB2FA000AF750 /* Guid.hpp in Headers */,
+				29A8C01C1EF042B400AD2478 /* Enum.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29A8C00F1EF0418C00AD2478 /* Zeus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29A8C0141EF0418C00AD2478 /* Build configuration list for PBXNativeTarget "Zeus" */;
+			buildPhases = (
+				29A8C00C1EF0418C00AD2478 /* Sources */,
+				29A8C00D1EF0418C00AD2478 /* Frameworks */,
+				29A8C00E1EF0418C00AD2478 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zeus;
+			productName = Zeus;
+			productReference = 29A8C0101EF0418C00AD2478 /* libZeus.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29A8C0081EF0418C00AD2478 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Matthew James Briggs";
+				TargetAttributes = {
+					29A8C00F1EF0418C00AD2478 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = BEL6W3V5K4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 29A8C00B1EF0418C00AD2478 /* Build configuration list for PBXProject "Zeus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29A8C0071EF0418C00AD2478;
+			productRefGroup = 29A8C0111EF0418C00AD2478 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29A8C00F1EF0418C00AD2478 /* Zeus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29A8C00C1EF0418C00AD2478 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29EDDF001F0CB3F6000AF750 /* Guid.cpp in Sources */,
+				29EDDEFC1F0CB2FA000AF750 /* Guid.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		29A8C0121EF0418C00AD2478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					$PROJECT_DIR/../Sourcecode/private,
+					$PROJECT_DIR/../Sourcecode/include,
+					$PROJECT_DIR/../Frameworks,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		29A8C0131EF0418C00AD2478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					$PROJECT_DIR/../Sourcecode/private,
+					$PROJECT_DIR/../Sourcecode/include,
+					$PROJECT_DIR/../Frameworks,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		29A8C0151EF0418C00AD2478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = BEL6W3V5K4;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		29A8C0161EF0418C00AD2478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = BEL6W3V5K4;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29A8C00B1EF0418C00AD2478 /* Build configuration list for PBXProject "Zeus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A8C0121EF0418C00AD2478 /* Debug */,
+				29A8C0131EF0418C00AD2478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29A8C0141EF0418C00AD2478 /* Build configuration list for PBXNativeTarget "Zeus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A8C0151EF0418C00AD2478 /* Debug */,
+				29A8C0161EF0418C00AD2478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29A8C0081EF0418C00AD2478 /* Project object */;
+}
