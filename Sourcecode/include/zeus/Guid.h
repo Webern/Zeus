@@ -1,4 +1,4 @@
-// Lyre, Copyright 2017 by Matthew James Briggs
+// Zeus, Copyright 2017 by Matthew James Briggs
 
 #pragma once
 

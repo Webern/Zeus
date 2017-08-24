@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		296798641F17DE6F0073899E /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 296798621F17DE6F0073899E /* Random.cpp */; };
+		296798651F17DE6F0073899E /* Random.h in Headers */ = {isa = PBXBuildFile; fileRef = 296798631F17DE6F0073899E /* Random.h */; };
 		29A8C01B1EF042B400AD2478 /* EnumWithString.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A8C0191EF042B400AD2478 /* EnumWithString.h */; };
 		29A8C01C1EF042B400AD2478 /* Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A8C01A1EF042B400AD2478 /* Enum.h */; };
 		29EDDEFC1F0CB2FA000AF750 /* Guid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29EDDEFA1F0CB2FA000AF750 /* Guid.cpp */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		296798621F17DE6F0073899E /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
+		296798631F17DE6F0073899E /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
+		296798661F17E3A10073899E /* RandomNumbers.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomNumbers.def; sourceTree = "<group>"; };
+		296798691F17E7660073899E /* Throw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Throw.h; sourceTree = "<group>"; };
 		29A8C0101EF0418C00AD2478 /* libZeus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZeus.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A8C0191EF042B400AD2478 /* EnumWithString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumWithString.h; sourceTree = "<group>"; };
 		29A8C01A1EF042B400AD2478 /* Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
@@ -61,6 +67,8 @@
 				29A8C01A1EF042B400AD2478 /* Enum.h */,
 				29EDDEFE1F0CB3F6000AF750 /* Guid.cpp */,
 				29EDDEFF1F0CB3F6000AF750 /* Guid.h */,
+				296798621F17DE6F0073899E /* Random.cpp */,
+				296798631F17DE6F0073899E /* Random.h */,
 			);
 			name = include;
 			path = ../Sourcecode/include/zeus;
@@ -69,9 +77,11 @@
 		29A8C0181EF0420600AD2478 /* private */ = {
 			isa = PBXGroup;
 			children = (
+				296798691F17E7660073899E /* Throw.h */,
+				296798661F17E3A10073899E /* RandomNumbers.def */,
 			);
 			name = private;
-			path = ../Sourcecode/private/zeus;
+			path = ../Sourcecode/private/zeus/private;
 			sourceTree = "<group>";
 		};
 		29EDDEF81F0CB2C4000AF750 /* Frameworks */ = {
@@ -103,6 +113,7 @@
 				29EDDF011F0CB3F6000AF750 /* Guid.h in Headers */,
 				29EDDEFD1F0CB2FA000AF750 /* Guid.hpp in Headers */,
 				29A8C01C1EF042B400AD2478 /* Enum.h in Headers */,
+				296798651F17DE6F0073899E /* Random.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296798641F17DE6F0073899E /* Random.cpp in Sources */,
 				29EDDF001F0CB3F6000AF750 /* Guid.cpp in Sources */,
 				29EDDEFC1F0CB2FA000AF750 /* Guid.cpp in Sources */,
 			);
