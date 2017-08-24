@@ -15,20 +15,24 @@ namespace zeus
     {
     public:
     	Guid();
-        Guid( const std::array<unsigned char, 16>& inBytes );
-        Guid( const unsigned char* inBytes );
+        Guid( const std::array<uint8_t, 16>& inBytes );
         Guid( const std::string& inString );
+        Guid( uint64_t inA, uint64_t inB );
 
     public:
     	bool getIsValid() const;
         void setZero();
         std::string getString() const;
+        uint64_t getA() const;
+        uint64_t getB() const;
+        std::array<uint8_t, 16> getBytes() const;
 
     private:
-        std::string mValue;
+        uint64_t myA;
+        uint64_t myB;
 
     private:
-        void privateFunc();     
+        void setFromBytes( const std::array<uint8_t, 16>& inBytes );
     };
 
     bool operator<( const Guid& inLeft, const Guid& inRight );

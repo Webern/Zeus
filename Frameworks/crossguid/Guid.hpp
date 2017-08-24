@@ -48,8 +48,8 @@ BEGIN_XG_NAMESPACE
 class Guid
 {
 public:
-	Guid(const std::array<unsigned char, 16> &bytes);
-	Guid(const unsigned char *bytes);
+	Guid(const std::array<uint8_t, 16> &bytes);
+	Guid(const uint8_t *bytes);
 	Guid(const std::string &fromString);
 	Guid();
 	Guid(const Guid &other);
@@ -61,12 +61,13 @@ public:
 	operator std::string() const;
 	void swap(Guid &other);
 	bool isValid() const;
+    const std::array<uint8_t, 16>& getBytes();
 
 private:
 	void zeroify();
 
 	// actual data
-	std::array<unsigned char, 16> _bytes;
+	std::array<uint8_t, 16> _bytes;
 
 	// make the << operator a friend so it can access _bytes
 	friend std::ostream &operator<<(std::ostream &s, const Guid &guid);
