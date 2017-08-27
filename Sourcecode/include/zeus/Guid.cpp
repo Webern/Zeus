@@ -5,6 +5,8 @@
 
 #include <thread>
 #include <chrono>
+#include <sstream>
+#include <iomanip>
 
 namespace zeus
 {
@@ -66,7 +68,37 @@ namespace zeus
     std::string
     Guid::getString() const
     {
-        return "";
+        std::stringstream result;
+        auto aP = reinterpret_cast<const uint8_t* const>( &myA );
+        auto bP = reinterpret_cast<const uint8_t* const>( &myB );
+
+        for( size_t i = 0; i < 16; ++i )
+        {
+            uint8_t theChar = 0;
+
+            if( i < 8 )
+            {
+                theChar = aP[i];
+            }
+            else
+            {
+                theChar = bP[i % 8];
+            }
+            //         8    13   18   23
+            // e90f73bc-8ae0-11e7-bb31-be2e44b06b34
+            // a75846f7-6487-b100-d80c-c21c21aa8c00
+
+            if( i == 4 || i == 6 || i == 8 || i == 10 )
+            {
+                result << "-";
+            }
+            result  << std::setfill( '0' )
+                    << std::setw( 2 )
+                    << std::hex
+                    << static_cast<int>( theChar );
+        }
+
+        return result.str();
     }
 
 

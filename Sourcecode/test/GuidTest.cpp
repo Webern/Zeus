@@ -19,6 +19,7 @@ TEST_CASE( "sdfsdf", "[Guid]" )
     for( int i = 0; i < 1000000000; ++i )
     {
         const auto result = guids.emplace();
+        std::cout << result.first->getString() << std::endl;
 
         if( !result.second )
         {
