@@ -11,22 +11,41 @@
 
 using namespace zeus;
 
-TEST_CASE( "sdfsdf", "[Guid]" )
+TEST_CASE( "CollisionCheck", "[Guid]" )
 {
+    constexpr const size_t count = 1000000;
     std::set<Guid> guids;
-    int dupCount = 0;
+    std::vector<Guid> duplicates;
 
-    for( int i = 0; i < 1000000000; ++i )
+    for( size_t i = 0; i < count; ++i )
     {
         const auto result = guids.emplace();
-        std::cout << result.first->getString() << std::endl;
 
         if( !result.second )
         {
-            std::cout << dupCount << " duplicate " << result.first->getA() << " - " << result.first->getB() << std::endl;
-            ++dupCount;
+            std::cout << "duplicate " << result.first->getA() << " - " << result.first->getB() << std::endl;
+            duplicates.push_back( *result.first );
         }
     }
+
+    REQUIRE( duplicates.size() == 0 );
+}
+
+
+TEST_CASE( "BitManipCheck01", "[Guid]" )
+{
+    Guid orig{};
+    REQUIRE( orig.getIsValid() );
+    Guid copy{ orig.getBytes() };
+    REQUIRE( orig == copy );
+}
+
+TEST_CASE( "StringParse01", "[Guid]" )
+{
+    Guid orig{};
+    REQUIRE( orig.getIsValid() );
+    Guid copy{ orig.getString() };
+    REQUIRE( orig == copy );
 }
 
 #endif

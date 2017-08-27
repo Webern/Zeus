@@ -84,9 +84,6 @@ namespace zeus
             {
                 theChar = bP[i % 8];
             }
-            //         8    13   18   23
-            // e90f73bc-8ae0-11e7-bb31-be2e44b06b34
-            // a75846f7-6487-b100-d80c-c21c21aa8c00
 
             if( i == 4 || i == 6 || i == 8 || i == 10 )
             {
@@ -121,14 +118,14 @@ namespace zeus
     {
         std::array<uint8_t, 16> bytes;
 
-        for( int i = 0; i < 16; ++i )
+        for( int i = 0; i < 8; ++i )
         {
-            bytes[i] = static_cast<uint8_t>( ( myA >> ( i * 16 ) ) & 0xFF );
+            bytes[i] = static_cast<uint8_t>( ( myA >> ( i * 8 ) ) & 0xFF );
         }
 
-        for( int i = 0; i < 16; ++i )
+        for( int i = 0; i < 8; ++i )
         {
-            bytes[i + 16] = static_cast<uint8_t>( ( myB >> ( i * 16 ) ) & 0xFF );
+            bytes[i + 8] = static_cast<uint8_t>( ( myB >> ( i * 8 ) ) & 0xFF );
         }
 
         return bytes;
@@ -138,23 +135,20 @@ namespace zeus
     void
     Guid::setFromBytes( const std::array<uint8_t, 16>& inBytes )
     {
-        myA = uint64_t( ( static_cast<uint64_t>( inBytes[0] ) ) << 56 |
-                       ( static_cast<uint64_t>( inBytes[1] ) ) << 48 |
-                       ( static_cast<uint64_t>( inBytes[2] ) ) << 40 |
-                       ( static_cast<uint64_t>( inBytes[3] ) ) << 32 |
-                       ( static_cast<uint64_t>( inBytes[4] ) ) << 24 |
-                       ( static_cast<uint64_t>( inBytes[5] ) ) << 16 |
-                       ( static_cast<uint64_t>( inBytes[6] ) ) << 8  |
-                       ( static_cast<uint64_t>( inBytes[7] ) ) << 0  );
+        auto aP = reinterpret_cast<uint8_t*>( &myA );
+        auto bP = reinterpret_cast<uint8_t*>( &myB );
 
-        myB = uint64_t( ( static_cast<uint64_t>( inBytes[8]  ) ) << 56 |
-                       ( static_cast<uint64_t>( inBytes[9]  ) ) << 48 |
-                       ( static_cast<uint64_t>( inBytes[10] ) ) << 40 |
-                       ( static_cast<uint64_t>( inBytes[11] ) ) << 32 |
-                       ( static_cast<uint64_t>( inBytes[12] ) ) << 24 |
-                       ( static_cast<uint64_t>( inBytes[13] ) ) << 16 |
-                       ( static_cast<uint64_t>( inBytes[14] ) ) << 8  |
-                       ( static_cast<uint64_t>( inBytes[15] ) ) << 0  );
+        for( size_t i = 0; i < 16; ++i )
+        {
+            if( i < 8 )
+            {
+                aP[i] = inBytes.at( i );
+            }
+            else
+            {
+                bP[i % 8] = inBytes.at( i );
+            }
+        }
     }
 
 
