@@ -61,8 +61,6 @@ TEST_CASE( "StringParse02", "[Guid]" )
 }
 
 
-
-
 TEST_CASE( "StringParse03", "[Guid]" )
 {
     const std::string str1 = "8ee18c15-5daf-6cFf-db24-5a6888fe9dce";
@@ -74,6 +72,17 @@ TEST_CASE( "StringParse03", "[Guid]" )
     REQUIRE( orig == copy );
 }
 
-//inString	const string &		0x00007fff5fbfe110
+
+TEST_CASE( "SetZero", "[Guid]" )
+{
+    Guid orig{};
+    REQUIRE( orig.getA() != 0 );
+    REQUIRE( orig.getB() != 0 );
+    orig.setZero();
+    REQUIRE( orig.getA() == 0 );
+    REQUIRE( orig.getB() == 0 );
+
+}
+
 
 #endif
