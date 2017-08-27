@@ -48,4 +48,32 @@ TEST_CASE( "StringParse01", "[Guid]" )
     REQUIRE( orig == copy );
 }
 
+
+TEST_CASE( "StringParse02", "[Guid]" )
+{
+    const std::string str1 = "8ee18c15-5daf-6c00-db24-5a6888fe9dce";
+    const std::string str2 = "8eE18C15-5dAF-6c00-DB24-5a6888fe9DCE";
+
+    Guid orig{ str1 };
+    REQUIRE( orig.getIsValid() );
+    Guid copy{ str2 };
+    REQUIRE( orig == copy );
+}
+
+
+
+
+TEST_CASE( "StringParse03", "[Guid]" )
+{
+    const std::string str1 = "8ee18c15-5daf-6cFf-db24-5a6888fe9dce";
+    const std::string str2 = "8eE18C15xxxx5dAF6cFfxDB24_____5a6888fe9DCE";
+
+    Guid orig{ str1 };
+    REQUIRE( orig.getIsValid() );
+    Guid copy{ str2 };
+    REQUIRE( orig == copy );
+}
+
+//inString	const string &		0x00007fff5fbfe110
+
 #endif

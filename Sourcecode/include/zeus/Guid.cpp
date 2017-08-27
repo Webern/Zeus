@@ -2,11 +2,42 @@
 
 #include "zeus/Guid.h"
 #include "zeus/Rand.h"
+#include "zeus/private/Throw.h"
 
 #include <thread>
 #include <chrono>
 #include <sstream>
 #include <iomanip>
+#include <map>
+
+namespace
+{
+    const std::map<char, uint8_t> charMap =
+    {
+        { '0', 0 },
+        { '1', 1 },
+        { '2', 2 },
+        { '3', 3 },
+        { '4', 4 },
+        { '5', 5 },
+        { '6', 6 },
+        { '7', 7 },
+        { '8', 8 },
+        { '9', 9 },
+        { 'a', 10 },
+        { 'b', 11 },
+        { 'c', 12 },
+        { 'd', 13 },
+        { 'e', 14 },
+        { 'f', 15 },
+        { 'A', 10 },
+        { 'B', 11 },
+        { 'C', 12 },
+        { 'D', 13 },
+        { 'E', 14 },
+        { 'F', 15 },
+    };
+}
 
 namespace zeus
 {
@@ -155,7 +186,50 @@ namespace zeus
     void
     Guid::setFromString( const std::string& inString )
     {
-        // TODO - implement
+        std::array<uint8_t, 16> bytes{};
+        size_t bytesFound = 0;
+        std::array<uint8_t, 2> bytePair{ 'x', 'x' };
+
+
+        for( const auto c : inString )
+        {
+            const auto found = charMap.find( c );
+
+            if( found != charMap.cend() )
+            {
+                if( bytePair[0] == 'x' )
+                {
+                    bytePair[0] = found->second;
+                }
+                else if ( bytePair[1] == 'x' )
+                {
+                    bytePair[1] = found->second;
+                    uint8_t value = ( bytePair.at( 0 ) * 16 ) + bytePair.at( 1 );
+                    bytes[bytesFound] = value;
+                    bytePair[0] = 'x';
+                    bytePair[1] = 'x';
+                    ++bytesFound;
+                }
+                else
+                {
+                    ZEUS_THROW( "the code is broken" );
+                }
+            }
+
+            if( bytesFound > 15 )
+            {
+                break;
+            }
+        }
+
+        if( bytesFound == 16 )
+        {
+            setFromBytes( bytes );
+        }
+        else
+        {
+            setZero();
+        }
     }
 
 ////////////////////////////////////////////////////////////////////////////////
