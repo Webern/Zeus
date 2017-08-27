@@ -4,6 +4,7 @@
 
 #include <string>
 #include <array>
+#include <mutex>
 
 namespace zeus
 {
@@ -33,13 +34,15 @@ namespace zeus
 
     private:
         void setFromBytes( const std::array<uint8_t, 16>& inBytes );
+        static std::recursive_mutex ourMutex;
+        static bool ourIsSeeded;
     };
 
-    bool operator<( const Guid& inLeft, const Guid& inRight );
-    bool operator>( const Guid& inLeft, const Guid& inRight );
-    bool operator==( const Guid& inLeft, const Guid& inRight );
-    bool operator!=( const Guid& inLeft, const Guid& inRight );
-    bool operator>=( const Guid& inLeft, const Guid& inRight );
-    bool operator<=( const Guid& inLeft, const Guid& inRight );
+//    bool operator<( const Guid& inLeft, const Guid& inRight );
+//    bool operator>( const Guid& inLeft, const Guid& inRight );
+//    bool operator==( const Guid& inLeft, const Guid& inRight );
+//    bool operator!=( const Guid& inLeft, const Guid& inRight );
+//    bool operator>=( const Guid& inLeft, const Guid& inRight );
+//    bool operator<=( const Guid& inLeft, const Guid& inRight );
 
 }

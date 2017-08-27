@@ -7,31 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		294283381F51135300F5AC34 /* Rand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 294283361F51135300F5AC34 /* Rand.cpp */; };
+		294283391F51135300F5AC34 /* Rand.h in Headers */ = {isa = PBXBuildFile; fileRef = 294283371F51135300F5AC34 /* Rand.h */; };
 		296798641F17DE6F0073899E /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 296798621F17DE6F0073899E /* Random.cpp */; };
 		296798651F17DE6F0073899E /* Random.h in Headers */ = {isa = PBXBuildFile; fileRef = 296798631F17DE6F0073899E /* Random.h */; };
+		29A1E4161F4EA08000E126ED /* CatchMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29A1E4121F4EA07600E126ED /* CatchMain.cpp */; };
+		29A1E4191F4EA14C00E126ED /* GuidTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29A1E4171F4EA11000E126ED /* GuidTest.cpp */; };
+		29A1E41A1F4EA1D600E126ED /* libZeus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A8C0101EF0418C00AD2478 /* libZeus.a */; };
 		29A8C01B1EF042B400AD2478 /* EnumWithString.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A8C0191EF042B400AD2478 /* EnumWithString.h */; };
 		29A8C01C1EF042B400AD2478 /* Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A8C01A1EF042B400AD2478 /* Enum.h */; };
-		29EDDEFC1F0CB2FA000AF750 /* Guid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29EDDEFA1F0CB2FA000AF750 /* Guid.cpp */; };
-		29EDDEFD1F0CB2FA000AF750 /* Guid.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 29EDDEFB1F0CB2FA000AF750 /* Guid.hpp */; };
 		29EDDF001F0CB3F6000AF750 /* Guid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29EDDEFE1F0CB3F6000AF750 /* Guid.cpp */; };
 		29EDDF011F0CB3F6000AF750 /* Guid.h in Headers */ = {isa = PBXBuildFile; fileRef = 29EDDEFF1F0CB3F6000AF750 /* Guid.h */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		29A1E4071F4E9F0800E126ED /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		294283361F51135300F5AC34 /* Rand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rand.cpp; sourceTree = "<group>"; };
+		294283371F51135300F5AC34 /* Rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rand.h; sourceTree = "<group>"; };
 		296798621F17DE6F0073899E /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
 		296798631F17DE6F0073899E /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
 		296798661F17E3A10073899E /* RandomNumbers.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RandomNumbers.def; sourceTree = "<group>"; };
 		296798691F17E7660073899E /* Throw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Throw.h; sourceTree = "<group>"; };
+		29A1E4091F4E9F0800E126ED /* Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A1E4121F4EA07600E126ED /* CatchMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CatchMain.cpp; sourceTree = "<group>"; };
+		29A1E4131F4EA07600E126ED /* Catch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Catch.h; sourceTree = "<group>"; };
+		29A1E4171F4EA11000E126ED /* GuidTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuidTest.cpp; sourceTree = "<group>"; };
 		29A8C0101EF0418C00AD2478 /* libZeus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZeus.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A8C0191EF042B400AD2478 /* EnumWithString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumWithString.h; sourceTree = "<group>"; };
 		29A8C01A1EF042B400AD2478 /* Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
-		29EDDEFA1F0CB2FA000AF750 /* Guid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Guid.cpp; sourceTree = "<group>"; };
-		29EDDEFB1F0CB2FA000AF750 /* Guid.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Guid.hpp; sourceTree = "<group>"; };
+		29EDDEFA1F0CB2FA000AF750 /* XgGuid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XgGuid.cpp; sourceTree = "<group>"; };
+		29EDDEFB1F0CB2FA000AF750 /* XgGuid.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = XgGuid.hpp; sourceTree = "<group>"; };
 		29EDDEFE1F0CB3F6000AF750 /* Guid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Guid.cpp; sourceTree = "<group>"; };
 		29EDDEFF1F0CB3F6000AF750 /* Guid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guid.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		29A1E4061F4E9F0800E126ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A1E41A1F4EA1D600E126ED /* libZeus.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A8C00D1EF0418C00AD2478 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,9 +71,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29A1E40A1F4E9F0800E126ED /* test */ = {
+			isa = PBXGroup;
+			children = (
+				29A1E4131F4EA07600E126ED /* Catch.h */,
+				29A1E4121F4EA07600E126ED /* CatchMain.cpp */,
+				29A1E4171F4EA11000E126ED /* GuidTest.cpp */,
+			);
+			name = test;
+			path = ../Sourcecode/test;
+			sourceTree = "<group>";
+		};
 		29A8C0071EF0418C00AD2478 = {
 			isa = PBXGroup;
 			children = (
+				29A1E40A1F4E9F0800E126ED /* test */,
 				29EDDEF81F0CB2C4000AF750 /* Frameworks */,
 				29A8C0181EF0420600AD2478 /* private */,
 				29A8C0171EF041F500AD2478 /* include */,
@@ -56,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				29A8C0101EF0418C00AD2478 /* libZeus.a */,
+				29A1E4091F4E9F0800E126ED /* Test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +111,8 @@
 				29EDDEFF1F0CB3F6000AF750 /* Guid.h */,
 				296798621F17DE6F0073899E /* Random.cpp */,
 				296798631F17DE6F0073899E /* Random.h */,
+				294283361F51135300F5AC34 /* Rand.cpp */,
+				294283371F51135300F5AC34 /* Rand.h */,
 			);
 			name = include;
 			path = ../Sourcecode/include/zeus;
@@ -96,8 +140,8 @@
 		29EDDEF91F0CB2E3000AF750 /* crossguid */ = {
 			isa = PBXGroup;
 			children = (
-				29EDDEFA1F0CB2FA000AF750 /* Guid.cpp */,
-				29EDDEFB1F0CB2FA000AF750 /* Guid.hpp */,
+				29EDDEFA1F0CB2FA000AF750 /* XgGuid.cpp */,
+				29EDDEFB1F0CB2FA000AF750 /* XgGuid.hpp */,
 			);
 			path = crossguid;
 			sourceTree = "<group>";
@@ -109,9 +153,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294283391F51135300F5AC34 /* Rand.h in Headers */,
 				29A8C01B1EF042B400AD2478 /* EnumWithString.h in Headers */,
 				29EDDF011F0CB3F6000AF750 /* Guid.h in Headers */,
-				29EDDEFD1F0CB2FA000AF750 /* Guid.hpp in Headers */,
 				29A8C01C1EF042B400AD2478 /* Enum.h in Headers */,
 				296798651F17DE6F0073899E /* Random.h in Headers */,
 			);
@@ -120,6 +164,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		29A1E4081F4E9F0800E126ED /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29A1E40F1F4E9F0800E126ED /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				29A1E4051F4E9F0800E126ED /* Sources */,
+				29A1E4061F4E9F0800E126ED /* Frameworks */,
+				29A1E4071F4E9F0800E126ED /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Test;
+			productName = Test;
+			productReference = 29A1E4091F4E9F0800E126ED /* Test */;
+			productType = "com.apple.product-type.tool";
+		};
 		29A8C00F1EF0418C00AD2478 /* Zeus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29A8C0141EF0418C00AD2478 /* Build configuration list for PBXNativeTarget "Zeus" */;
@@ -146,6 +207,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Matthew James Briggs";
 				TargetAttributes = {
+					29A1E4081F4E9F0800E126ED = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BEL6W3V5K4;
+						ProvisioningStyle = Automatic;
+					};
 					29A8C00F1EF0418C00AD2478 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = BEL6W3V5K4;
@@ -166,31 +232,69 @@
 			projectRoot = "";
 			targets = (
 				29A8C00F1EF0418C00AD2478 /* Zeus */,
+				29A1E4081F4E9F0800E126ED /* Test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		29A1E4051F4E9F0800E126ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A1E4191F4EA14C00E126ED /* GuidTest.cpp in Sources */,
+				29A1E4161F4EA08000E126ED /* CatchMain.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A8C00C1EF0418C00AD2478 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294283381F51135300F5AC34 /* Rand.cpp in Sources */,
 				296798641F17DE6F0073899E /* Random.cpp in Sources */,
 				29EDDF001F0CB3F6000AF750 /* Guid.cpp in Sources */,
-				29EDDEFC1F0CB2FA000AF750 /* Guid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		29A1E40D1F4E9F0800E126ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = BEL6W3V5K4;
+				HEADER_SEARCH_PATHS = (
+					$PROJECT_DIR/../Sourcecode/private,
+					$PROJECT_DIR/../Sourcecode/include,
+					$PROJECT_DIR/../Frameworks,
+					$PROJECT_DIR/../Sourcecode/test,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		29A1E40E1F4E9F0800E126ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = BEL6W3V5K4;
+				HEADER_SEARCH_PATHS = (
+					$PROJECT_DIR/../Sourcecode/private,
+					$PROJECT_DIR/../Sourcecode/include,
+					$PROJECT_DIR/../Frameworks,
+					$PROJECT_DIR/../Sourcecode/test,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		29A8C0121EF0418C00AD2478 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -243,7 +347,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -304,6 +408,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		29A1E40F1F4E9F0800E126ED /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A1E40D1F4E9F0800E126ED /* Debug */,
+				29A1E40E1F4E9F0800E126ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		29A8C00B1EF0418C00AD2478 /* Build configuration list for PBXProject "Zeus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

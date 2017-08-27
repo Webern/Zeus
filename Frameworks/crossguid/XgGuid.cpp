@@ -22,8 +22,38 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+// define the appropriate platform-specific macro for crossguid before including it
+#if defined (__WIN32__)
+#define GUID_WINDOWS
+#endif
+
+#if defined (__CYGWIN32__)
+#define GUID_WINDOWS
+#endif
+
+#if defined (_MSC_VER)
+#define GUID_WINDOWS
+#endif
+
+#if __APPLE__
+#include "TargetConditionals.h"
+#if TARGET_OS_IPHONE
+#define GUID_CFUUID
+#elif TARGET_OS_MAC
+#define GUID_CFUUID
+#endif
+#endif
+
+#if __linux__
+#define GUID_LIBUUID
+#elif __unix__
+#define GUID_LIBUUID
+#elif defined(_POSIX_VERSION)
+#define GUID_LIBUUID
+#endif
+
 #include <cstring>
-#include "Guid.hpp"
+#include "XgGuid.hpp"
 
 #ifdef GUID_LIBUUID
 #include <uuid/uuid.h>
