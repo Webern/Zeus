@@ -10,7 +10,7 @@ namespace zeus
 {
 	/// @brief Guid Generator
 	///
-	/// @detailed Generates a guid and holds it as a string
+	/// @detailed Generates a guid and holds it as two 64-bit unsigned ints
 	///
     class Guid
     {
@@ -27,22 +27,26 @@ namespace zeus
         uint64_t getA() const;
         uint64_t getB() const;
         std::array<uint8_t, 16> getBytes() const;
+        void setFromBytes( const std::array<uint8_t, 16>& inBytes );
+        void setFromString( const std::string& inString );
 
     private:
         uint64_t myA;
         uint64_t myB;
 
     private:
-        void setFromBytes( const std::array<uint8_t, 16>& inBytes );
         static std::recursive_mutex ourMutex;
         static bool ourIsSeeded;
+
+    private:
+        void generate();
     };
 
-//    bool operator<( const Guid& inLeft, const Guid& inRight );
-//    bool operator>( const Guid& inLeft, const Guid& inRight );
-//    bool operator==( const Guid& inLeft, const Guid& inRight );
-//    bool operator!=( const Guid& inLeft, const Guid& inRight );
-//    bool operator>=( const Guid& inLeft, const Guid& inRight );
-//    bool operator<=( const Guid& inLeft, const Guid& inRight );
+    bool operator<( const Guid& inLeft, const Guid& inRight );
+    bool operator>( const Guid& inLeft, const Guid& inRight );
+    bool operator==( const Guid& inLeft, const Guid& inRight );
+    bool operator!=( const Guid& inLeft, const Guid& inRight );
+    bool operator>=( const Guid& inLeft, const Guid& inRight );
+    bool operator<=( const Guid& inLeft, const Guid& inRight );
 
 }

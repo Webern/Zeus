@@ -13,9 +13,19 @@ using namespace zeus;
 
 TEST_CASE( "sdfsdf", "[Guid]" )
 {
-    auto& r = Rand::getInstance();
-//    Guid guid{};
-//    std::cout << guid.getString() << std::endl;
+    std::set<Guid> guids;
+    int dupCount = 0;
+
+    for( int i = 0; i < 1000000000; ++i )
+    {
+        const auto result = guids.emplace();
+
+        if( !result.second )
+        {
+            std::cout << dupCount << " duplicate " << result.first->getA() << " - " << result.first->getB() << std::endl;
+            ++dupCount;
+        }
+    }
 }
 
 #endif
