@@ -107,11 +107,11 @@ namespace zeus
 
             unsigned int uintHash = 0;
             unsigned int part0 = *reinterpret_cast<unsigned int*>(hashBytesP);
-            unsigned int part3 = *reinterpret_cast<unsigned int*>(hashBytesP + 3);
+            unsigned int part4 = *reinterpret_cast<unsigned int*>(hashBytesP + 4);
 
             uintHash = part0;
             uintHash *= PRIME_NUMBER_UINT;
-            uintHash += part3;
+            uintHash += part4;
             srandSeed = uintHash;
         }
 
